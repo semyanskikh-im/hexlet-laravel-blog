@@ -7,8 +7,13 @@
         <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
+        <header>
+            @include('partials.nav')
+        </header>
+
         <div class="container mt-4">
             <h1>@yield('header')</h1>
+
             <div>
                 @yield('content')
             </div>
