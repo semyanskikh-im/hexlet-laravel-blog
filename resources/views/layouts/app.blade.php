@@ -1,22 +1,25 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        @include('shared.metatags')
-        <title>Hexlet Blog - @yield('title')</title>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <script src="{{ asset('js/app.js') }}"></script>
-    </head>
-    <body>
-        <header>
-            @include('partials.nav')
-        </header>
 
-        <div class="container mt-4">
-            <h1>@yield('header')</h1>
+<head>
+    @include('shared.metatags')
+    <title>Hexlet Blog - @yield('title')</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}"></script>
+</head>
 
-            <div>
-                @yield('content')
-            </div>
+<body>
+    <header>
+        @include('partials.nav')
+    </header>
+
+    <div class="container mt-4">
+        <h1>@yield('header')</h1>
+
+        <div>
+            @yield('content')
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
