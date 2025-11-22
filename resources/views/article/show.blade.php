@@ -8,5 +8,6 @@
     <h1>{{ $article->name }}</h1>
     <p>{{ $article->body }}</p>
     <br>
+    <a href="{{ route('articles.edit', $article) }}">Изменить</a><br><br>
     <a href="{{ route('about') }}">Back to about</a>
 @endsection

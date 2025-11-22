@@ -9,3 +9,29 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+/* Стили для уменьшения пагинации */
+.pagination svg {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.pagination a.relative {
+    padding: 0.25rem 0.5rem !important;
+}
+
+.pagination .text-sm {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}
+
+/* Более агрессивные стили для пагинации */
+nav[aria-label="Pagination Navigation"] svg {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+nav[aria-label="Pagination Navigation"] a {
+    padding: 0.25rem 0.5rem !important;
+}
