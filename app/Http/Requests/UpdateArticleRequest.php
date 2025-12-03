@@ -25,7 +25,7 @@ class UpdateArticleRequest extends FormRequest
         return [
             'name' => [
                 'required',
-                Rule::unique('articles')->ignore($this->route('article')),
+                Rule::unique('articles')->ignore($this->route('id')),
             ],
             'body' => 'required|min:10'
         ];

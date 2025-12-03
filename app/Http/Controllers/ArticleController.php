@@ -68,4 +68,15 @@ class ArticleController extends Controller
             ->route('articles.index')
             ->with('status', 'Статья успешно изменена!');
     }
+
+    public function destroy($id)
+    {
+        // DELETE — идемпотентный метод, поэтому результат операции всегда один и тот же
+        $article = Article::find($id);
+        if ($article) {
+            $article->delete();
+        }
+        return redirect()->route('articles.index')
+            ->with('status', 'Статья удалена!');;
+    }
 }
